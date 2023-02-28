@@ -13,11 +13,10 @@ class Pos(MycroftSkill):
 
     def converse(self, utterances, lang):
         if utterances and (self.voc_match(utterances[0], 'stop') != True):
-            for i in utterances:
-                text = utterances[i]
-                tokenized_text = word_tokenize(text)
-                tagged_text = nltk.pos_tag(tokenized_text)
-                self.speak(print(tagged_text))
+            text = utterances[0]
+            tokenized_text = word_tokenize(text)
+            tagged_text = nltk.pos_tag(tokenized_text)
+            self.speak(print(tagged_text))
             return True
         else:
             return False
