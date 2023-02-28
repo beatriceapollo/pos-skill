@@ -21,8 +21,8 @@ class Pos(MycroftSkill):
         else:
             return False
         
-    def stop(self):
-        self.stop
+    def stop(process):
+        process.terminate()
 
 def create_skill():
     return Pos()
