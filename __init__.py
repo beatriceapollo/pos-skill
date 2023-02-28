@@ -10,6 +10,7 @@ class Pos(MycroftSkill):
     @intent_file_handler('pos.intent')
     def handle_pos(self, message):
         self.speak_dialog('pos')
+
     def converse(self, utterances, lang):
         if utterances:
             text = utterances[0]
@@ -19,6 +20,9 @@ class Pos(MycroftSkill):
             return True
         else:
             return False
+        
+    def stop(self):
+        self.stop
 
 def create_skill():
     return Pos()
