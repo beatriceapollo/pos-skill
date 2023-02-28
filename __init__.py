@@ -21,8 +21,8 @@ class Pos(MycroftSkill):
         else:
             return False
         
-    def stop(process):
-        process.terminate()
+    def stop(self):
+        self.speak('ok I will stop')
 
 def create_skill():
     return Pos()
