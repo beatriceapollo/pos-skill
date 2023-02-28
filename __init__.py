@@ -12,7 +12,7 @@ class Pos(MycroftSkill):
         self.speak_dialog('pos')
     def converse(self, utterances, lang):
         if utterances:
-            text = utterances
+            text = utterances[0]
             tokenized_text = word_tokenize(text)
             tagged_text = nltk.pos_tag(tokenized_text)
             self.speak(print(tagged_text))
